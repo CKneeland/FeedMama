@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FeedMama" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WelcomeViewController" id="BYZ-38-t0r" customClass="WelcomeViewController" customModule="FeedMama" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,11 +29,17 @@
                                         <rect key="frame" x="0.0" y="0.0" width="277.5" height="85.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="Login Button -White" title=""/>
+                                        <connections>
+                                            <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1bP-Ro-hxg"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XpE-1A-CgD" userLabel="Sign Up Button">
                                         <rect key="frame" x="0.0" y="105.5" width="277.5" height="85.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="Sign up Button - White"/>
+                                        <connections>
+                                            <action selector="signUpButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="taC-oF-p7r"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -46,6 +52,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="hwE-nl-Gq8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7fB-A0-5xE"/>
+                            <constraint firstItem="by5-Qh-hCh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="21" id="A2a-QM-Olz"/>
                             <constraint firstItem="hwE-nl-Gq8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="F5w-7G-lBF"/>
                             <constraint firstAttribute="trailing" secondItem="hwE-nl-Gq8" secondAttribute="trailing" constant="-90" id="GNW-DL-Mpz"/>
                             <constraint firstItem="xRg-Dj-uz5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jo3-1i-Wkz"/>
@@ -53,6 +60,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xRg-Dj-uz5" secondAttribute="bottom" constant="155" id="Yhz-3U-dh7"/>
                             <constraint firstItem="by5-Qh-hCh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dUU-Uh-DYz"/>
                             <constraint firstItem="hwE-nl-Gq8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-90" id="j9n-SM-yh3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="by5-Qh-hCh" secondAttribute="trailing" constant="21" id="ppL-FM-5yn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="by5-Qh-hCh" secondAttribute="bottom" constant="530" id="vmL-f1-jLz"/>
                             <constraint firstAttribute="bottom" secondItem="hwE-nl-Gq8" secondAttribute="bottom" constant="-32" id="xhb-JB-v8R"/>
                             <constraint firstItem="by5-Qh-hCh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="69" id="zY0-KV-2xu"/>
@@ -63,10 +71,10 @@
             </objects>
             <point key="canvasLocation" x="28.985507246376812" y="83.705357142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--User Type View Controller-->
         <scene sceneID="iUT-Gf-cx0">
             <objects>
-                <viewController id="P7F-9P-xYH" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserTypeViewController" id="P7F-9P-xYH" customClass="UserTypeViewController" customModule="FeedMama" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4mG-mo-nDJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -81,11 +89,17 @@
                                 <rect key="frame" x="50" y="768.5" width="118.5" height="33.5"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="Back Button"/>
+                                <connections>
+                                    <action selector="backButton:" destination="P7F-9P-xYH" eventType="touchUpInside" id="Vgl-ra-7ad"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PIM-n2-8NK">
                                 <rect key="frame" x="224" y="772" width="140" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="I’m a Physician"/>
+                                <connections>
+                                    <action selector="physicianUserButton:" destination="P7F-9P-xYH" eventType="touchUpInside" id="gGb-e1-jUS"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zbW-Ds-LAD">
                                 <rect key="frame" x="68.5" y="253.5" width="277.5" height="276.5"/>
@@ -94,16 +108,25 @@
                                         <rect key="frame" x="0.0" y="0.0" width="277.5" height="85.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="Customer Button"/>
+                                        <connections>
+                                            <action selector="customerUserButton:" destination="P7F-9P-xYH" eventType="touchUpInside" id="a9O-1U-RkT"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mwu-G5-vsk">
                                         <rect key="frame" x="0.0" y="95.5" width="277.5" height="85.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="Mother Button"/>
+                                        <connections>
+                                            <action selector="motherUserButton:" destination="P7F-9P-xYH" eventType="touchUpInside" id="5O8-BB-QlH"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NpR-SD-1rg">
                                         <rect key="frame" x="0.0" y="191" width="277.5" height="85.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="Restaurant Button"/>
+                                        <connections>
+                                            <action selector="restaurantUserButton:" destination="P7F-9P-xYH" eventType="touchUpInside" id="TpV-Jl-HUt"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
