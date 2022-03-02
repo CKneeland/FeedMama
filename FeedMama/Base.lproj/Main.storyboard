@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sg5-ys-3jE">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -20,7 +20,7 @@
                                 <rect key="frame" x="-90" y="-32" width="594" height="960"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FeedMama Logo - Primary White" translatesAutoresizingMaskIntoConstraints="NO" id="by5-Qh-hCh">
-                                <rect key="frame" x="21" y="113" width="372" height="219"/>
+                                <rect key="frame" x="21" y="157" width="372" height="175"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="xRg-Dj-uz5">
                                 <rect key="frame" x="68.5" y="516" width="277.5" height="191"/>
@@ -31,6 +31,7 @@
                                         <buttonConfiguration key="configuration" style="plain" image="Login Button -White" title=""/>
                                         <connections>
                                             <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1bP-Ro-hxg"/>
+                                            <segue destination="3qh-HE-E5Y" kind="show" id="qBr-8O-lcs"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XpE-1A-CgD" userLabel="Sign Up Button">
@@ -39,6 +40,7 @@
                                         <buttonConfiguration key="configuration" style="plain" image="Sign up Button - White"/>
                                         <connections>
                                             <action selector="signUpButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="taC-oF-p7r"/>
+                                            <segue destination="P7F-9P-xYH" kind="show" id="4Bt-BK-A3n"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -66,10 +68,11 @@
                             <constraint firstItem="by5-Qh-hCh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="69" id="zY0-KV-2xu"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="9KG-tE-LeO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="28.985507246376812" y="83.705357142857139"/>
+            <point key="canvasLocation" x="939.13043478260875" y="83.705357142857139"/>
         </scene>
         <!--User Type View Controller-->
         <scene sceneID="iUT-Gf-cx0">
@@ -80,29 +83,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Who are you" translatesAutoresizingMaskIntoConstraints="NO" id="gX0-Sa-oQH">
-                                <rect key="frame" x="103.5" y="184" width="207.5" height="19.5"/>
+                                <rect key="frame" x="103.5" y="228" width="207.5" height="19.5"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FeedMama Logo - Secondary Salmon" translatesAutoresizingMaskIntoConstraints="NO" id="ix0-K0-qn7">
-                                <rect key="frame" x="185" y="69" width="44.5" height="35.5"/>
+                                <rect key="frame" x="185" y="113" width="44.5" height="35.5"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UhH-ep-fmy">
-                                <rect key="frame" x="50" y="768.5" width="118.5" height="33.5"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="Back Button"/>
-                                <connections>
-                                    <action selector="backButton:" destination="P7F-9P-xYH" eventType="touchUpInside" id="Vgl-ra-7ad"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PIM-n2-8NK">
                                 <rect key="frame" x="224" y="772" width="140" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="I’m a Physician"/>
                                 <connections>
                                     <action selector="physicianUserButton:" destination="P7F-9P-xYH" eventType="touchUpInside" id="gGb-e1-jUS"/>
+                                    <segue destination="ROf-1J-lEJ" kind="show" id="OEw-u5-jeW"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zbW-Ds-LAD">
-                                <rect key="frame" x="68.5" y="253.5" width="277.5" height="276.5"/>
+                                <rect key="frame" x="68.5" y="297.5" width="277.5" height="276.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jw2-cW-gKL">
                                         <rect key="frame" x="0.0" y="0.0" width="277.5" height="85.5"/>
@@ -110,6 +106,7 @@
                                         <buttonConfiguration key="configuration" style="plain" image="Customer Button"/>
                                         <connections>
                                             <action selector="customerUserButton:" destination="P7F-9P-xYH" eventType="touchUpInside" id="a9O-1U-RkT"/>
+                                            <segue destination="ROf-1J-lEJ" kind="show" id="oNC-Gx-M0T"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mwu-G5-vsk">
@@ -118,6 +115,7 @@
                                         <buttonConfiguration key="configuration" style="plain" image="Mother Button"/>
                                         <connections>
                                             <action selector="motherUserButton:" destination="P7F-9P-xYH" eventType="touchUpInside" id="5O8-BB-QlH"/>
+                                            <segue destination="ROf-1J-lEJ" kind="show" id="fsD-d7-IsU"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NpR-SD-1rg">
@@ -126,6 +124,7 @@
                                         <buttonConfiguration key="configuration" style="plain" image="Restaurant Button"/>
                                         <connections>
                                             <action selector="restaurantUserButton:" destination="P7F-9P-xYH" eventType="touchUpInside" id="TpV-Jl-HUt"/>
+                                            <segue destination="ROf-1J-lEJ" kind="show" id="mok-oP-NJu"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -136,12 +135,9 @@
                         <constraints>
                             <constraint firstItem="zbW-Ds-LAD" firstAttribute="top" secondItem="gX0-Sa-oQH" secondAttribute="bottom" constant="50" id="57P-Qv-mCz"/>
                             <constraint firstItem="gX0-Sa-oQH" firstAttribute="centerX" secondItem="4mG-mo-nDJ" secondAttribute="centerX" id="5bk-ug-eO3"/>
-                            <constraint firstItem="OGs-rP-2NS" firstAttribute="bottom" secondItem="UhH-ep-fmy" secondAttribute="bottom" constant="60" id="8wG-bC-CkQ"/>
                             <constraint firstItem="ix0-K0-qn7" firstAttribute="top" secondItem="OGs-rP-2NS" secondAttribute="top" constant="25" id="9wK-Qn-JgX"/>
-                            <constraint firstItem="UhH-ep-fmy" firstAttribute="leading" secondItem="OGs-rP-2NS" secondAttribute="leading" constant="50" id="Kwc-Om-Eje"/>
                             <constraint firstItem="ix0-K0-qn7" firstAttribute="centerX" secondItem="4mG-mo-nDJ" secondAttribute="centerX" id="LPw-fW-Ht1"/>
                             <constraint firstItem="PIM-n2-8NK" firstAttribute="leading" secondItem="OGs-rP-2NS" secondAttribute="leading" constant="224" id="QQY-42-ZPv"/>
-                            <constraint firstItem="OGs-rP-2NS" firstAttribute="trailing" secondItem="UhH-ep-fmy" secondAttribute="trailing" constant="245.5" id="XAO-Ne-03l"/>
                             <constraint firstItem="OGs-rP-2NS" firstAttribute="bottom" secondItem="PIM-n2-8NK" secondAttribute="bottom" constant="60" id="bXm-M0-xbq"/>
                             <constraint firstItem="zbW-Ds-LAD" firstAttribute="centerX" secondItem="4mG-mo-nDJ" secondAttribute="centerX" id="d7h-hS-7as"/>
                             <constraint firstItem="OGs-rP-2NS" firstAttribute="trailing" secondItem="PIM-n2-8NK" secondAttribute="trailing" constant="50" id="e87-MA-FxI"/>
@@ -152,7 +148,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yzo-bL-LRj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="895.6521739130435" y="83.705357142857139"/>
+            <point key="canvasLocation" x="1805.7971014492755" y="83.705357142857139"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="BzG-f2-AXr">
@@ -163,10 +159,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FeedMama Logo - Secondary Salmon" translatesAutoresizingMaskIntoConstraints="NO" id="NF1-uh-Ijv">
-                                <rect key="frame" x="185" y="69" width="44.5" height="35.5"/>
+                                <rect key="frame" x="185" y="113" width="44.5" height="35.5"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FeedMama Logo - Primary Salmon" translatesAutoresizingMaskIntoConstraints="NO" id="1Gy-oE-IhA">
-                                <rect key="frame" x="67.5" y="184" width="279.5" height="80"/>
+                                <rect key="frame" x="67.5" y="188" width="279.5" height="124"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="PdP-Ue-mX7">
                                 <rect key="frame" x="57" y="332" width="300" height="232.5"/>
@@ -212,33 +208,24 @@
                                     </imageView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oHA-YT-Pjt">
-                                <rect key="frame" x="50" y="768.5" width="118.5" height="33.5"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="Back Button"/>
-                                <connections>
-                                    <action selector="backButton:" destination="P7F-9P-xYH" eventType="touchUpInside" id="UIy-Rw-u4k"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cNt-tu-dtV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="NF1-uh-Ijv" firstAttribute="centerX" secondItem="oQV-eu-0AM" secondAttribute="centerX" id="1gQ-3t-orD"/>
                             <constraint firstItem="1Gy-oE-IhA" firstAttribute="centerX" secondItem="oQV-eu-0AM" secondAttribute="centerX" id="8oD-tY-Vwc"/>
-                            <constraint firstItem="oHA-YT-Pjt" firstAttribute="leading" secondItem="cNt-tu-dtV" secondAttribute="leading" constant="50" id="JwV-tA-KLS"/>
-                            <constraint firstItem="cNt-tu-dtV" firstAttribute="trailing" secondItem="oHA-YT-Pjt" secondAttribute="trailing" constant="245.5" id="KzS-ix-cLU"/>
                             <constraint firstItem="NF1-uh-Ijv" firstAttribute="top" secondItem="cNt-tu-dtV" secondAttribute="top" constant="25" id="SHG-Rs-5Xi"/>
-                            <constraint firstItem="cNt-tu-dtV" firstAttribute="bottom" secondItem="oHA-YT-Pjt" secondAttribute="bottom" constant="60" id="bSu-ZH-VcR"/>
-                            <constraint firstItem="1Gy-oE-IhA" firstAttribute="top" secondItem="cNt-tu-dtV" secondAttribute="top" constant="140" id="hDU-0D-sq4"/>
+                            <constraint firstItem="PdP-Ue-mX7" firstAttribute="top" secondItem="1Gy-oE-IhA" secondAttribute="bottom" constant="20" id="ffm-a8-uqG"/>
+                            <constraint firstItem="1Gy-oE-IhA" firstAttribute="top" secondItem="cNt-tu-dtV" secondAttribute="top" constant="100" id="hDU-0D-sq4"/>
                             <constraint firstItem="PdP-Ue-mX7" firstAttribute="centerX" secondItem="oQV-eu-0AM" secondAttribute="centerX" id="jUx-rY-Cjp"/>
                             <constraint firstItem="PdP-Ue-mX7" firstAttribute="centerY" secondItem="oQV-eu-0AM" secondAttribute="centerY" id="mnC-92-z5Z"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="HaI-lr-kKH"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="18Z-AE-5ET" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="896" y="802"/>
+            <point key="canvasLocation" x="939" y="796"/>
         </scene>
         <!--Sign Up Acct Info View Controller-->
         <scene sceneID="Huo-Ck-RiN">
@@ -249,13 +236,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FeedMama Logo - Secondary Salmon" translatesAutoresizingMaskIntoConstraints="NO" id="iJH-De-FrH">
-                                <rect key="frame" x="185" y="69" width="44.5" height="35.5"/>
+                                <rect key="frame" x="185" y="113" width="44.5" height="35.5"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Account information" translatesAutoresizingMaskIntoConstraints="NO" id="eWw-1j-hXs">
-                                <rect key="frame" x="82" y="144" width="250.5" height="15"/>
+                                <rect key="frame" x="82" y="188" width="250.5" height="15"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="eds-45-49x">
-                                <rect key="frame" x="57" y="184" width="300" height="568"/>
+                                <rect key="frame" x="57" y="228" width="300" height="568"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="arl-gN-as5">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="35"/>
@@ -354,39 +341,49 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CcF-1z-dsm">
-                                <rect key="frame" x="50" y="768.5" width="118.5" height="33.5"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="Back Button"/>
-                                <connections>
-                                    <action selector="backButton:" destination="P7F-9P-xYH" eventType="touchUpInside" id="Zfh-m4-jtu"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="b4U-sk-WGP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="eWw-1j-hXs" firstAttribute="top" secondItem="b4U-sk-WGP" secondAttribute="top" constant="100" id="Ia3-fC-MtB"/>
-                            <constraint firstItem="b4U-sk-WGP" firstAttribute="bottom" secondItem="CcF-1z-dsm" secondAttribute="bottom" constant="60" id="Lko-5q-pA5"/>
                             <constraint firstItem="eds-45-49x" firstAttribute="centerX" secondItem="01x-Gs-Z4j" secondAttribute="centerX" id="Ubr-Z5-8Ci"/>
-                            <constraint firstItem="b4U-sk-WGP" firstAttribute="trailing" secondItem="CcF-1z-dsm" secondAttribute="trailing" constant="245.5" id="abh-Qp-ObE"/>
-                            <constraint firstItem="CcF-1z-dsm" firstAttribute="leading" secondItem="b4U-sk-WGP" secondAttribute="leading" constant="50" id="eLl-e1-rbx"/>
                             <constraint firstItem="iJH-De-FrH" firstAttribute="centerX" secondItem="01x-Gs-Z4j" secondAttribute="centerX" id="iNl-tD-LPc"/>
                             <constraint firstItem="eWw-1j-hXs" firstAttribute="centerX" secondItem="01x-Gs-Z4j" secondAttribute="centerX" id="lpK-AK-dQE"/>
                             <constraint firstItem="eds-45-49x" firstAttribute="top" secondItem="eWw-1j-hXs" secondAttribute="bottom" constant="25" id="sDc-Wr-kD3"/>
                             <constraint firstItem="iJH-De-FrH" firstAttribute="top" secondItem="b4U-sk-WGP" secondAttribute="top" constant="25" id="yGc-wn-aDk"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="cQc-kp-BLx"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4pL-G1-uAs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1774" y="84"/>
+            <point key="canvasLocation" x="2684.057971014493" y="83.705357142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Fiw-C4-G3c">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sg5-ys-3jE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0w6-dn-Xsx">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="xC4-6z-yix"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZKb-2Z-8ol" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="83.705357142857139"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="fsD-d7-IsU"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Account information" width="250.5" height="15"/>
         <image name="BG - Light" width="487.5" height="973.5"/>
-        <image name="Back Button" width="94.5" height="19.5"/>
         <image name="Customer Button" width="253.5" height="71.5"/>
         <image name="FeedMama Logo - Primary Salmon" width="279.5" height="80"/>
         <image name="FeedMama Logo - Primary White" width="372" height="106"/>
