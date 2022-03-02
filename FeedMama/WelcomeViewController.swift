@@ -13,8 +13,6 @@ class WelcomeViewController: UIViewController {
     }
     
     @IBAction func signUpButton(_ sender: Any) {
-        let userTypeVC = self.storyboard?.instantiateViewController(withIdentifier: "UserTypeViewController") as! UserTypeViewController
-        self.navigationController?.pushViewController(userTypeVC, animated: true)
     }
     
     override func viewDidLoad() {

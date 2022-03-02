@@ -1,29 +1,14 @@
 //
-//  UserTypeViewController.swift
+//  LoginViewController.swift
 //  FeedMama
 //
-//  Created by Jimmy Chen on 2/28/22.
+//  Created by Jimmy Chen on 3/1/22.
 //
 
 import UIKit
 
-class UserTypeViewController: UIViewController {
+class LoginViewController: UIViewController {
 
-    @IBAction func backButton(_ sender: Any) {
-    }
-    
-    @IBAction func physicianUserButton(_ sender: Any) {
-    }
-    
-    @IBAction func customerUserButton(_ sender: Any) {
-    }
-    
-    @IBAction func motherUserButton(_ sender: Any) {
-    }
-    
-    @IBAction func restaurantUserButton(_ sender: Any) {
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
